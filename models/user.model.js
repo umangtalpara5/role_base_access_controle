@@ -19,6 +19,10 @@ const UserSchema = new mongoose.Schema({
     enum: [roles.admin, roles.moderator, roles.client],
     default: roles.client,
   },
+  access: {
+    type: [String], 
+    default: ['Show','edit']
+},
 });
 
 UserSchema.pre('save', async function (next) {

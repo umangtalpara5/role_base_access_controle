@@ -14,6 +14,8 @@ router.get('/users', async (req, res, next) => {
   }
 });
 
+// findOneAndUpdate({email: "moderator@gmail.com"}, {$set:{access:"edit"}})
+
 //specific users routes
 router.get('/user/:id', async (req, res, next) => {
   try {
